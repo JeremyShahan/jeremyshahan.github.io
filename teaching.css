@@ -1,0 +1,9 @@
+.main-content{
+    width: auto;
+    margin: 50px;
+    padding: 20px;
+    background-color: rgb(196, 196, 196);
+    border: 5px solid rgb(47, 47, 47);
+    border-radius: 20px;
+    align-items: center;
+}

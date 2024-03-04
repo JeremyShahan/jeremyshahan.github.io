@@ -1,0 +1,46 @@
+body{
+    height: 2000px;
+    margin: 0px;
+
+    background-color: #787878;
+}
+
+div.header{
+    position: sticky;
+    top: 0px;
+    height: 80px;
+    background-color: #6f42c1;
+    display: flex;
+}
+
+li.link{
+    list-style-type: none;
+    float: right;
+    margin-right: 20px;
+
+}
+
+li.link a{
+    padding: 5px;
+    color: #dbdbdb;
+    text-decoration: none;
+}
+
+li.link a:hover{
+    color: ffc107;
+}
+
+.flex-child1{
+    flex: 1;
+    padding: 5px;
+    color: #dbdbdb;
+    line-height: 50px;
+    font-size: x-large
+}
+
+.flex-child2{
+    flex: 3.3;
+    padding: 5px;
+    font-size: larger;
+
+}
