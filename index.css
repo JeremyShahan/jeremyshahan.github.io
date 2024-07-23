@@ -1,9 +1,11 @@
 .main-content{
-    width: auto;
-    margin: 50px;
-    padding: 20px;
-    background-color: rgb(196, 196, 196);
-    border: 5px solid rgb(47, 47, 47);
+    width: 80%;
+    padding: 5%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(196, 196, 196);
+    border: 5px solid rgb(47, 47, 47); */
     border-radius: 20px;
     align-items: center;
     font-size: x-large;
@@ -12,11 +14,11 @@
 .description{
     float: left;
     padding: 5%;
-    width: 45%;
+    width: 55%;
     font-size: x-large;
 }
 
 .profile_pic{
-    width: 44%;
+    width: 20%;
     border: 1px solid black;
 }
