@@ -22,3 +22,73 @@
     width: 20%;
     border: 1px solid black;
 }
+
+/* .image.left {
+    float: left;
+    margin: 0 1.5em 1em 0;
+    top: 0.25em;
+    max-width: 40%;
+}
+
+.image {
+    border-radius: 0.25em;
+    border: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.image.left img, .image.right img {
+    width: 100%;
+}
+
+.image img {
+    border-radius: 0.25em;
+    display: block;
+}
+
+.link_fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: calc(var(--width));
+  left:
+} */
+
+.box {
+  background: white;
+  position: relative;
+  width: 100%;
+  /* max-width: 450px;
+  min-width: 350px; */
+  height: 300px;
+  margin: auto;
+  border: 5px solid #c2c2c2;
+}
+
+.box_pic {
+  margin: 5px;
+  float: left;
+}
+
+.box_description {
+  margin: 5px;
+  float: right;
+  width: calc(95% - 144px * 2.5);
+  height: 100%;
+  color: black;
+}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.box_pic img {
+  width: calc(144px * 2.5);
+  height: calc(108px * 2.5);
+}
