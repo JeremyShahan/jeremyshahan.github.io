@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%
+}
+
+#container {
+  background-color: #212228;
+  background-image: linear-gradient(#292a30 .1em, transparent .1em),
+  linear-gradient(90deg, #292a30 .1em, transparent .1em);
+  background-size: 4em 4em;
+  height: 100%;
+}
+
+#card_back {
+  width: 300%;
+  height: 300%;
+  background-color: #AFDA9F;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+}
+
+#card_front {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 20;
+}
+
+.border {
+  border: 50px black solid;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  background-color: transparent;
+  position: absolute;
+  display: block;
+  z-index: 10;
+}
+
+#my_canvas {
+  /* width: 1401px;
+  height: 966px; */
+}
