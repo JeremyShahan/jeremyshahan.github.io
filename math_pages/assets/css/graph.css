@@ -1,12 +1,11 @@
-.graph {
-  background: white;
-  width: 90%;
-  /* margin: calc(5% - 2px); */
-  margin: 5%;
-  border: 2px solid gray;
-  height: 1000px;
+body {
+  /* overflow: hidden; */
 }
 
-.function {
-
+#graph {
+  background: white;
+  width: 80%;
+  /* margin: calc(5% - 2px); */
+  margin: 10%;
+  height: 800px;
 }
