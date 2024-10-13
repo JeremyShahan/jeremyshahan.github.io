@@ -1,3 +1,34 @@
+div .definition span {
+  text-decoration: underline;
+  color: yellow;
+}
+
+div .definition:before {
+  text-decoration: underline;
+  color: white;
+  content: "Definition:";
+}
+
+div .definition {
+  padding: 20px;
+  border: solid white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+div .example:before {
+  text-decoration: underline;
+  color: white;
+  content: "Ex:";
+}
+
+div .example {
+  padding: 20px;
+  border: solid white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
 div .proposition:before {
   text-decoration: underline;
   color: white;
@@ -23,6 +54,10 @@ div .proof {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  color: black;
+}
+
+div .math_content b {
   color: black;
 }
 

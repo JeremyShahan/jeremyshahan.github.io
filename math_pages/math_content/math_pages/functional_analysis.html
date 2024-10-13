@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Functional Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="./../../assets/css/main.css" />
+		<link rel="stylesheet" href="./../../assets/css/math_formating.css" />
+		<noscript><link rel="stylesheet" href="./../../assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="./../math_front_page.html" class="title">Back</a>
+				<nav>
+					<ul>
+						<li><a href="./../../../index.html">Home</a></li>
+						<li><a href="./../../research.html">Research</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Function Spaces</h1>
+
+
+							<section>
+								<div class="definition">
+									Given a field, say \( \mathbb{F} \) (usually either \( \mathbb{R} \) or \( \mathbb{C} \) ), a <span>vector space</span> over \( \mathbb{F} \), denoted <span>\( V \)</span>, is a nonempty set that
+									is closed under vector addition (+), and scalar multiplication \((\cdot)\), and satisfies the following axioms:
+									<div class="table-wrapper">
+										<table class="alt">
+											<tbody>
+												<tr>
+													<td>Associativity</td>
+													<td>\( u + (v + w) = (u + v) + w \)</td>
+												</tr>
+												<tr>
+													<td>Commutitivity</td>
+													<td>\( u + v = v + u \)</td>
+												</tr>
+												<tr>
+													<td>Additive Identity</td>
+													<td>\( \exists \vec{0} \in  V \) such that \( u + \vec{0} = u, \quad \forall u \in V \)</td>
+												</tr>
+												<tr>
+													<td>Additive Inverse</td>
+													<td>\( \forall u \in  V, \quad \exists (-u) \in V \) such that \( u + (-u) = \vec{0} \)</td>
+												</tr>
+												<tr>
+													<td>Multiplicative Identity (in \( \mathbb{F} \) )</td>
+													<td>\( \exists 1 \in  \mathbb{F} \) such that \( 1u = u, \quad \forall u \in V \)</td>
+												</tr>
+												<tr>
+													<td>Distributive with respect to vector addition</td>
+													<td>\( a(u + v) = au + av \quad \forall u, v \in V \) and \( \forall a \in \mathbb{F} \)</td>
+												</tr>
+												<tr>
+													<td>Distributive with respect to scalar addition</td>
+													<td>\( (a + b)u = au + bu \quad \forall u \in V \) and \( \forall a, b \in \mathbb{F} \)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div class="example">
+									&nbsp The space \( V = \mathbb{R}^n \) is a vector space over the field \( \mathbb{R} \) with vector addition and scalar multiplication defined in the usual way for \( n \geq 1 \).
+									<div class="proof">
+										<button type="button" class="expand_proof"></button>
+										<div class="math_content">
+										  Note that by definition, \( v \in V \) is true if and only if \( v = \langle v_1, v_2, ..., v_n \rangle \) with \( v_i \in \mathbb{R} \) for \( i \in \{1, 2, ..., n\} \)
+											<br>
+											Hence, we can see that \( V \) is closed under vector addition and scalar multiplication very trivially: Let \( u, v \in V \) and \( a \in \mathbb{R} \).
+											\begin{align*}
+												u + v &= \langle u_1, u_2, ..., u_n \rangle + \langle v_1, v_2, ..., v_n \rangle \\
+												&= \langle u_1 + v_1, u_2 + v_2, ..., u_n + v_n \rangle,
+											\end{align*}
+											and \( u_i + v_i \in \mathbb{R} \) for all \( i \), hence \( u + v \in V \) and \( V \) is closed under vector addition. Similarly, we have,
+											\begin{align*}
+												au &= a \langle u_1, u_2, ..., u_n \rangle \\
+												&= \langle au_1, au_2, ..., au_n \rangle \in V
+											\end{align*}
+											and \( a u_i \in \mathbb{R} \) for all \( i \), hence \( au \in V \) and \( V \) is closed under scalar multiplication.
+											<br>
+											The remaining axioms are all pretty trivial to show since all are true due to the way vector addition and scalar mulitplication are defined. Let \( u, v, w \in V \) and \( a, b \in \mathbb{R} \)
+											and we will prove all the axioms here:
+											<br>
+											<b>Associativity</b>
+											\begin{align*}
+												u + (v + w) &= \langle u_1, u_2, ..., u_n \rangle + (\langle v_1, v_2, ..., v_n \rangle + \langle w_1, w_2, ..., w_n \rangle) \\
+												&= \langle u_1, u_2, ..., u_n \rangle + \langle v_1 + w_1, v_2 + w_2, ..., v_n + w_n \rangle \\
+												&= \langle u_1 + (v_1 + w_1), u_2 + (v_2 + w_2), ..., u_n + (v_n + w_n) \rangle \\
+												&= \langle (u_1 + v_1) + w_1, (u_2 + v_2) + w_2, ..., (u_n + v_n) + w_n \rangle \\
+												&= \langle u_1 + v_1, u_2 + v_2, ..., u_n + v_n \rangle + \langle w_1, w_2, ..., w_n \rangle \\
+												&= (\langle u_1, u_2, ..., u_n \rangle + \langle v_1, v_2, ..., v_n \rangle) + \langle w_1, w_2, ..., w_n \rangle \\
+												&= (u + v) + w
+											\end{align*}
+											<b>Commutitivity</b>
+											\begin{align*}
+												u + v &= \langle u_1, u_2, ..., u_n \rangle + \langle v_1, v_2, ..., v_n \rangle \\
+												&= \langle u_1 + v_1, u_2 + v_2, ..., u_n + v_n \rangle \\
+												&= \langle v_1 + u_1, v_2 + u_2, ..., v_n + u_n \rangle \\
+												&= \langle v_1, v_2, ..., v_n \rangle + \langle u_1, u_2, ..., u_n \rangle \\
+												&= v + u
+											\end{align*}
+											<b>Additive Identity</b><br>
+											Define \( \vec{0} := \langle 0, 0, ..., 0 \rangle \) and note that
+											\begin{align*}
+												u + \vec{0} &= \langle u_1, u_2, ..., u_n \rangle + \langle 0, 0, ..., 0 \rangle \\
+												&= \langle u_1 + 0, u_2 + 0, ..., u_n + 0 \rangle \\
+												&= \langle u_1, u_2, ..., u_n \rangle \\
+												&= u
+											\end{align*}
+											Hence, \( \vec{0} \) is the additive identity in \( V \). <br>
+											<b>Additive Inverse</b><br>
+											Given \( u \in V \) define \( -u := \langle -u_1, -u_2, ..., -u_3 \rangle \) and note that
+											\begin{align*}
+												u + (-u) &= \langle u_1, u_2, ..., u_n \rangle + \langle -u_1, -u_2, ..., -u_n \rangle \\
+												&= \langle u_1 + (-u_1), u_2 + (-u_2), ..., u_n + (-u_n) \rangle \\
+												&= \langle 0, 0, ..., 0 \rangle \\
+												&= \vec{0}
+											\end{align*}
+											Hence, \( -u \) is the additive inverse of \( u \). <br>
+											<b>Multiplicative Identity (in \(\mathbb{F}\))</b><br>
+											Note that the multiplicative identity in \( \mathbb{R} \) is \(1\) since,
+											\begin{align*}
+												1u &= 1\langle u_1, u_2, ..., u_n \rangle \\
+												&= \langle 1 \cdot u_1, 1 \cdot u_2, ..., 1 \cdot u_n \rangle \\
+												&= \langle u_1, u_2, ..., u_n \rangle \\
+												&= u
+											\end{align*}
+											<b>Distributive with respect to vector addition</b>
+											\begin{align*}
+												a(u + v) &= a(\langle u_1, u_2, ..., u_n \rangle + \langle v_1, v_2, ..., v_n \rangle) \\
+												&= a(\langle u_1 + v_1, u_2 + v_2, ..., u_n + v_n \rangle) \\
+												&= \langle a(u_1 + v_1), a(u_2 + v_2), ..., a(u_n + v_n) \rangle \\
+												&= \langle au_1 + av_1, au_2 + av_2, ..., au_n + av_n \rangle \\
+												&= a\langle u_1, u_2, ..., u_n \rangle + a\langle v_1, v_2, ..., v_n \rangle \\
+												&= au + av
+											\end{align*}
+											<b>Distributive with respect to scalar multiplication</b>
+											\begin{align*}
+												(a+b)u &= (a+b)\langle u_1, u_2, ..., u_n \rangle \\
+												&= \langle (a+b)u_1, (a+b)u_2, ..., (a+b)u_n \rangle \\
+												&= \langle au_1 + bu_1, au_2 + bu_2, ..., au_n + bu_n \rangle \\
+												&= a\langle u_1, u_2, ..., u_n \rangle + b\langle u_1, u_2, ..., u_n \rangle \\
+												&= au + bu
+											\end{align*}
+										</div>
+									</div>
+								</div>
+
+								<div class="example">
+									&nbsp The space \( V = L^p(\mathbb{R}) := \{ f : \int_{\mathbb{R}} |f|^p d\lambda < \infty \} \) is a vector space for \( 1 \leq p < \infty \)
+								</div>
+
+								<div class="definition">
+									Given a vector space \( V \) over some field \( \mathbb{F} \), a <span>norm</span>, say <span>\( ||\cdot|| : V \rightarrow \mathbb{F} \)</span>,
+									is a function with the following properties:
+									<div class="table-wrapper">
+										<table class="alt">
+											<tbody>
+												<tr>
+													<td>Tringle Inequality</td>
+													<td>\( || v + u || \leq ||v|| + ||u|| \quad \forall u,v \in V \)</td>
+												</tr>
+												<tr>
+													<td>Absolute Homogeneity</td>
+													<td>\( || \alpha u || = |\alpha| \cdot ||u|| \quad \forall u \in V \) and \( \forall \alpha \in \mathbb{F} \)</td>
+												</tr>
+												<tr>
+													<td>Positive Definiteness/Point Separating</td>
+													<td>Given some \(u \in V\) then \( ||u|| = 0 \) if and only if \( u = 0 \)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									A vector space on which a norm can be defined is called a <span>normable vector space</span>. There are examples of vector spaces that can not
+									have norms, but the examples are quite technical and will be avoided for now. The pairing of a vector space \(V\), with a <span>norm \(||\cdot||\)</span> on \(V\),
+									denoted by <span>\( (V, ||\cdot||) \)</span>, is called a <span>normed vector space</span>.
+								</div>
+
+								<div class="example">
+									&nbsp \( (\mathbb{R}, |\cdot| ) \) is a normed vector space.
+								</div>
+								<div class="example">
+									&nbsp \( (\mathbb{R}^n, ||\cdot||_{p} ) \) is a normed vector space, where \( ||\cdot||_{p} := \left( \sum_{i=1}^n |v_i|^p\right)^{1/p} \) and \( 1 \leq p < \infty \).
+								</div>
+								<div class="example">
+									&nbsp \( (\mathbb{R}^n, ||\cdot||_{\infty} ) \) is a normed vector space, where \( ||\cdot||_{\infty} := \max_{1 \leq i \leq n} |v_i| \).
+								</div>
+								<div class="example">
+									&nbsp \( (L^p(\mathbb{R}), ||\cdot||_{L^p(\mathbb{R})} ) \) is a normed vector space, where \( ||f||_{L^p(\mathbb{R})} := \left( \int_{\mathbb{R}} |f|^p dx \right)^{1/p} \).
+								</div>
+
+
+								<div class="definition">
+									Let \( V \) be a vector space let two norms be defined on \( V \), say \( ||\cdot||_1 \) and \( ||\cdot||_2 \). We say that the two norms \( ||\cdot||_1 \) and \( ||\cdot||_2 \)
+									are equivalent if there exist two real constants \( c > 0 \) and \( C \) such that
+									\begin{align*}
+										c||v||_1 \leq ||v||_2 \leq C||v||_1 \qquad \forall v \in V
+									\end{align*}
+								</div>
+							</section>
+
+
+							<section>
+								<div class="proposition">
+									All norms on a finite-dimensional vector space are equivalent
+								</div>
+								<div class="proof">
+									<button type="button" class="expand_proof"></button>
+									<div class="math_content">
+									  Let \( V \) be a normable finite-dimensional vector space. So then let \( \{x_i\}_{i=1}^n \) be a basis of \( V \) and note that for any \( x \in V \)
+										we can rewrite this vector as follows: \( x = \sum_{i=1}^n \alpha_i x_i \) for some constants \( \alpha_i \in \mathbb{F} \). So now notice that we can define a norm as follows:
+										\begin{align*}
+											||x||_1 := \sum_{i=1}^n |\alpha_i|
+										\end{align*}
+										Now let \( ||\cdot||_2 \) be an arbitrary norm on \( V \) and we notice the claim will be proven true if we can instead show that \( ||\cdot||_1 \) is equivalent to \( ||\cdot||_2 \).
+										So now let \( x \in V \) such that \( ||x||_1 = 1 \) and notice that we have the following:
+										\begin{align*}
+											||x||_2 &= \Big|\Big|\sum_{i=1}^n \alpha_i x_i \Big|\Big|_2 \\
+											&\leq \sum_{i=1}^n |\alpha_i| \cdot ||x_i||_2 \\
+											&\leq \sum_{i=1}^n |\alpha_i| \cdot \Big[\max_{1 \leq i \leq n} ||x_i||_2\Big] \\
+											&\leq \Big[\max_{1 \leq i \leq n} ||x_i||_2\Big] \sum_{i=1}^n |\alpha_i| \\
+											&= \Big[\max_{1 \leq i \leq n} ||x_i||_2\Big] ||x||_1,
+										\end{align*}
+										and by choosing \( c = 1 / \Big[\max_{1 \leq i \leq n} ||x_i||_2\Big] \) we get the following:
+										\begin{align*}
+											||x||_2 \leq \frac{1}{c} ||x||_1 &\implies c||x||_2 \leq ||x||_1
+										\end{align*}
+									</div>
+
+								</div>
+							</section>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		<script src="./../../assets/js/math.js"></script>
+
+	</body>
+</html>

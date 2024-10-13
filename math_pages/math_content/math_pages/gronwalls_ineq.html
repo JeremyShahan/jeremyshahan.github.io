@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Gr&#246;nwall's Inequality</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="./../../assets/css/main.css" />
+		<link rel="stylesheet" href="./../../assets/css/math_formating.css" />
+		<noscript><link rel="stylesheet" href="./../../assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="./../math_front_page.html" class="title">Back</a>
+				<nav>
+					<ul>
+						<li><a href="./../../../index.html">Home</a></li>
+						<li><a href="./../../research.html">Research</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Gr&#246;nwall's Inequality</h1>
+
+							<!-- Text -->
+								<section>
+									<p>
+										There are several different forms of Gr&#246;nwall's inequality.
+										Here we mention three different types: the differential form,
+										integral form, and discrete form.
+									</p>
+								</section>
+
+								<section>
+									<div class="proposition">
+										Gr&#246;nwall's Inequality (Differential Form) <br>
+										Let \( I = [a, \infty) \) and let \( \beta \) and \( u \)
+										be real-valued continuous functions defined on \( I \). If
+										\( u \) is differentiable in the interior \( I^{\circ} \) of
+										\( I \) and satisfies the differential inequality.
+										\begin{align}
+											u'(t) \leq \beta(t) u(t), \qquad \forall t \in I^{\circ},
+										\end{align}
+										then \( u \) is bounded by the solution of the corresponding
+										differential equation \( v'(t) = \beta(t)v(t) \). I.e.
+										\begin{align}
+											u(t) \leq u(a) \; \text{exp} \left(\int_a^t \beta(s) ds\right)
+										\end{align}
+									</div>
+									<div class="proof">
+										<button type="button" class="expand_proof"></button>
+										<div class="math_content">
+										  Define \( v(t) \) so that it is the solution of the following ODE
+											\begin{align}
+												v'(s) & = \beta(s)v(s) \\
+												v(a) & = 1
+											\end{align}
+											So then we have
+											\begin{align}
+												v'(s) = \beta(s)v(s) & \iff \int_a^t \frac{v'(s)}{v(s)} ds = \int_a^t \beta(s) ds, \\
+												& \iff \ln|v(t)| - \ln|v(a)| = \int_a^t \beta(s) ds, \\
+												& \iff \ln|v(t)| = \int_a^t \beta(s) ds, \\
+												& \iff |v(t)| = \text{exp} \left( \int_a^t \beta(s) ds \right), \\
+												& \iff v(t) = \text{exp} \left( \int_a^t \beta(s) ds \right), \\
+											\end{align}
+											where the last line is true due to the fact that \( \text{exp} \left( \int_a^t \beta(s) ds > 0 \right) \)
+											for all \( t \in I \) and \( v \) is continuous. This implies that either \( v < 0 \) or \( v > 0 \)
+											for all \( t \in I \). Due to \( v(a) = 1 \) we have that \( v > 0 \) for all \( t \in I \).
+											<br><br>
+											So now consider the following, using the quotient rule
+											\begin{align}
+												\frac{d}{dt} \frac{u(t)}{v(t)} = \frac{u'(t)v(t) - u(t)v'(t)}{v^2(t)} = \frac{u'(t)v(t) - u(t)\beta(t)v(t)}{v^2(t)} = \frac{u'(t) - u(t)\beta(t)}{v(t)} \leq 0.
+											\end{align}
+											Hence, it follows that
+											\begin{align}
+												\frac{u(t)}{v(t)} \leq \frac{u(a)}{v(a)} & \iff \frac{u(t)}{v(t)} \leq u(a) \\
+												& \iff u(t) \leq u(a)v(t) \\
+												& \iff u(t) \leq u(a)\text{exp} \left( \int_a^t \beta(s) ds \right) \\
+											\end{align}
+										</div>
+
+									</div>
+								</section>
+
+								<section>
+									<div class="proposition">
+										Gr&#246;nwall's Inequality (Integral Form) <br>
+										Let \( I = [a, \infty) \) and let \( \alpha \), \( \beta \),
+										and \( u \) be real-valued functions defined on \( I \).
+										Assume that \( \beta \) and \( u \) are continuous and that
+										the negative part of \( \alpha \) is integrable on every closed
+										and bounded subinterval of \( I \). If \( \beta \) is non-negative
+										and if \( u \) satisfies the inequality
+										\begin{align}
+											u(t) \leq \alpha(t) + \int_a^t \beta(s) u(s) ds, \qquad \forall t \in I,
+										\end{align}
+										then
+										\begin{align}
+											u(t) \leq \alpha(t) + \int_a^t \alpha(s) \beta(s) \text{exp} \left( \int_s^t \beta(r) dr \right) ds, \qquad \forall t \in I.
+										\end{align}
+										If, in addition, the function \( \alpha \) is non-decreasing, then
+										\begin{align}
+											u(t) \leq \text{exp} \left( \int_a^t \beta(s) ds \right), \qquad \forall t \in I.
+										\end{align}
+									</div>
+									<div class="proof">
+										<button type="button" class="expand_proof"></button>
+										<div class="math_content">
+										  Define \( v(t) \) as follows:
+											\begin{align}
+												v(t) := \text{exp} \left( - \int_a^t \beta(r) dr \right) \int_a^t \beta(r) u(r) dr, \forall s \in I.
+											\end{align}
+											So then it follows that
+											\begin{align}
+												v'(s) = \left( u(s) - \int_a^s \beta(r) u(r) dr \right) \beta(s) \text{exp}\left( - \int_a^s \beta(r) dr \right), \qquad \forall s \in I.
+											\end{align}
+											And now integrating \( v'(s) \) from \( a \) to \( t \) yields the following:
+											\begin{align}
+												& \int_a^t v'(s) ds = \int_a^t \left( u(s) - \int_a^s \beta(r) u(r) dr \right) \beta(s) \text{exp}\left( - \int_a^s \beta(r) dr \right) ds \\
+												\iff & v(t) = \int_a^t \left( u(s) - \int_a^s \beta(r) u(r) dr \right) \beta(s) \text{exp}\left( - \int_a^s \beta(r) dr \right) ds \\
+											\end{align}
+										</div>
+
+									</div>
+								</section>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="./../../assets/js/math.js"></script>
+
+	</body>
+</html>
