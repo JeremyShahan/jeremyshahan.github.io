@@ -3958,3 +3958,13 @@ input, select, textarea {
 			}
 
 		}
+
+div .food_image{
+	margin: auto;
+	max-width: 500px;
+	max-height: 500px;
+}
+
+div .timer_box{
+	width: 100%;
+}

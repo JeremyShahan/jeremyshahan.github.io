@@ -1,4 +1,9 @@
 <!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
 		<title>Meatloaf Recipe</title>
@@ -8,6 +13,10 @@
 	</head>
 	<body class="is-preload">
 
+
+
+
+<!--Header -->
 		<header id="header">
 			<a href="./../recipes.html" class="title">Back</a>
 			<nav>
@@ -18,18 +27,17 @@
 			</nav>
 		</header>
 
+<!--Main -->
 		<div id="wrapper">
 			<section id="main" class="wrapper">
 				<div class="inner">
-					<h1 class="major">Meatloaf Recipe</h1>
+					<h1 class="major">Meatloaf</h1>
 
+<!--2-3-4 Description -->
 					<section>
-						<h2>Image</h2>
-						<h3>Fit</h3>
 						<div class="box alt">
 							<div class="row gtr-uniform">
-								<div class="col-4"><span class="image fit"><img src="./../../images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="./../../images/pic01.jpg" alt="" /></span></div>
+								<div class="food_image"><span class="image fit"><img src="./../../images/pic01.jpg" alt="" /></span></div>
 							</div>
 						</div>
 						<h2>Description</h2>
@@ -44,6 +52,7 @@
 						</div>
 					</section>
 
+<!--2-3-4 Prep -->
 					<section>
 						<h2>Ingredients</h2>
 						<div class="table-wrapper">
@@ -112,6 +121,7 @@
 						</div>
 					</section>
 
+<!--2-3-4 Instructions -->
 					<section>
 						<h2>Instructions</h2>
 						<div class="row">
@@ -123,8 +133,8 @@
 									<li>Rub 1 teaspoon of garlic and pinch of salt into a paste; add garlic to pan.</li>
 									<li>Cook and stir until onions are tender and translucent. Stir in 1/2 a cup of grated carrots; remove from heat. Cool completely.</li>
 								</ul>
-
 							</div>
+
 							<div class="col-6 col-12-medium">
 								<h3>Breadcrumb Mixture</h3>
 								<ul>
@@ -138,43 +148,42 @@
 								</ul>
 							</div>
 
-							<div class="row">
-								<div class="col-6 col-12-medium">
-									<h3>Meatloaf</h3>
-									<ul>
-										<li>Preheat oven to 350 degrees Fahrenheit.</li>
-										<li>In a large mixing bowl combine 1 and 1/2 pounds of ground chuck, 1/2 a pound of ground pork, 4 slices of bacon, cooled vegetables and bread crumbs mixture.</li>
-										<li>Sprinkle in 2 teaspoons of salt and 1/2 a teaspoon of ground pepper. Using hands, mix until well blended.</li>
-										<li>Place the meatloaf mixture in a 9" by 5" loaf pan.</li>
-										<li>Spoon the ketchup topping over the meatloaf mixture.</li>
-										<li>Bake on middle rack for 1 hour or until meat thermometer reaches 155 degree F. Let rest 10 minutes before slicing.</li>
-								</div>
-
-								<div class="col-6 col-12-medium">
-									<br><br>
-									<div class="timer">
-										<p id="time_remaining">00:00</p>
-										<div class="row">
-											<div class="col-3 timer_buttons">
-												<button onclick="start_timer()" id="start_timer">start</button>
-											</div>
-											<div class="col-3 timer_buttons">
-												<button id="stop_timer">stop</button>
-											</div>
-											<div class="col-3">
-												minutes: <input type="number" min="0" max="59" value="59" placeholder="Minutes" id="num_minutes" />
-											</div>
-											<div class="col-3">
-												seconds:<input type="number" min="0" max="59" value="59" placeholder="Minutes" id="num_seconds" />
-											</div>
-										</div>
-									</div>
-								</div>
-
+							<div class="col-6 col-12-medium">
+								<h3>Meatloaf</h3>
+								<ul>
+									<li>Preheat oven to 350 degrees Fahrenheit.</li>
+									<li>In a large mixing bowl combine 1 and 1/2 pounds of ground chuck, 1/2 a pound of ground pork, 4 slices of bacon, cooled vegetables and bread crumbs mixture.</li>
+									<li>Sprinkle in 2 teaspoons of salt and 1/2 a teaspoon of ground pepper. Using hands, mix until well blended.</li>
+									<li>Place the meatloaf mixture in a 9" by 5" loaf pan.</li>
+									<li>Spoon the ketchup topping over the meatloaf mixture.</li>
+									<li>Bake on middle rack for 1 hour or until meat thermometer reaches 155 degree F. Let rest 10 minutes before slicing.</li>
 							</div>
 						</div>
 					</section>
 
+<!--2-3-4 Timer -->
+					<div class="timer_box">
+						<div class="timer">
+							<p id="time_remaining">00:00</p>
+							<div class="row">
+								<div class="col-3 timer_buttons">
+									<button onclick="start_timer()" id="start_timer">start</button>
+								</div>
+								<div class="col-3 timer_buttons">
+									<button id="stop_timer">stop</button>
+								</div>
+								<div class="col-3">
+									minutes: <input type="number" min="0" max="59" value="59" placeholder="Minutes" id="num_minutes" />
+								</div>
+								<div class="col-3">
+									seconds:<input type="number" min="0" max="59" value="59" placeholder="Minutes" id="num_seconds" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+
+<!--2-3-4 Things to Try for Next Time -->
 					<section>
 						<h2>Things to Try for Next Time</h2>
 						<ul>
@@ -184,16 +193,22 @@
 
 				</div>
 			</section>
-
 		</div>
 
+
+
+
+<!--Footer -->
 	<footer id="footer" class="wrapper alt">
 		<div class="inner">
 		</div>
 	</footer>
 
+
+
+
+<!--Scripts -->
 	<script src="./../../assets/js/timer.js"></script>
 
 	</body>
 </html>
-<!-- http://localhost:8080/math_pages/miscellaneous_content/recipes/main_dishes/meatloaf.html -->
